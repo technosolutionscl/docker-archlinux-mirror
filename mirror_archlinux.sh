@@ -13,6 +13,6 @@ cd /archlinux_mirror
 #OPTIONS=-"rtlvH --delete-after --delay-updates --safe-links --max-delete=3000"
 
 #$RSYNC $OPTIONS $MIRROR ./ > /dev/null
-rsync -rtlH --delete-after --delay-updates --safe-links --max-delete=3000 rsync://mirror.csclub.uwaterloo.ca:/archlinux/ archlinux/ > /dev/null
+rsync -rtlH --exclude=archlinux --delete-after --delay-updates --safe-links --max-delete=3000 rsync://mirror.csclub.uwaterloo.ca:/archlinux/ archlinux/ > _last_sync.log
 
 date > __last_sync
